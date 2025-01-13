@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vocabular!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+      <img class="logo" src="vocabularlogo.png">
+      <h1>Vocabular!</h1>
+      <h2>Vocab List</h2>
+  </header>
+  <h3>Image (1 Coin):</h3>
+
+  <div id="imageOutput"></div>
+  <h3>Definition (3 Coin): <span id="definitionOutput"></span></h3>
+  <h3>Part of speech: </h3>
+  <div class="gridContainer">
+      <div id="r1c1" class="spots"></div>
+      <div id="r1c2" class="spots"></div>
+      <div id="r1c3" class="spots"></div>
+      <div id="r1c4" class="spots"></div>
+      <div id="r1c5" class="spots"></div>
+      <div id="r2c1" class="spots"></div>
+      <div id="r2c2" class="spots"></div>
+      <div id="r2c3" class="spots"></div>
+      <div id="r2c4" class="spots"></div>
+      <div id="r2c5" class="spots"></div>
+      <div id="r3c1" class="spots"></div>
+      <div id="r3c2" class="spots"></div>
+      <div id="r3c3" class="spots"></div>
+      <div id="r3c4" class="spots"></div>
+      <div id="r3c5" class="spots"></div>
+      <div id="r4c1" class="spots"></div>
+      <div id="r4c2" class="spots"></div>
+      <div id="r4c3" class="spots"></div>
+      <div id="r4c4" class="spots"></div>
+      <div id="r4c5" class="spots"></div>
+      <div id="r5c1" class="spots"></div>
+      <div id="r5c2" class="spots"></div>
+      <div id="r5c3" class="spots"></div>
+      <div id="r5c4" class="spots"></div>
+      <div id="r5c5"class="spots"></div>
+      <div id="r6c1" class="spots"></div>
+      <div id="r6c2" class="spots"></div>
+      <div id="r6c3" class="spots"></div>
+      <div id="r6c4" class="spots"></div>
+      <div id="r6c5" class="spots"></div>
+  </div>
+  <div class="keyboard">
+      <div class="keyboardrow1">
+          <div class="keys" data-letter="Q">Q</div>
+          <div class="keys" data-letter="W">W</div>
+          <div class="keys" data-letter="E">E</div>
+          <div class="keys" data-letter="R">R</div>
+          <div class="keys" data-letter="T">T</div>
+          <div class="keys" data-letter="Y">Y</div>
+          <div class="keys" data-letter="U">U</div>
+          <div class="keys" data-letter="I">I</div>
+          <div class="keys" data-letter="O">O</div>
+          <div class="keys" data-letter="P">P</div>
+      </div>
+      <div class="keyboardrow2">
+          <div class="keys" data-letter="A">A</div>
+          <div class="keys" data-letter="S">S</div>
+          <div class="keys" data-letter="D">D</div>
+          <div class="keys" data-letter="F">F</div>
+          <div class="keys" data-letter="G">G</div>
+          <div class="keys" data-letter="H">H</div>
+          <div class="keys" data-letter="J">J</div>
+          <div class="keys" data-letter="K">K</div>
+          <div class="keys" data-letter="L">L</div>
+      </div>
+      <div class="keyboardrow3">
+          <div class="keys" data-letter="ENTER">Enter</div>
+          <div class="keys" data-letter="Z">Z</div>
+          <div class="keys" data-letter="X">X</div>
+          <div class="keys" data-letter="C">C</div>
+          <div class="keys" data-letter="V">V</div>
+          <div class="keys" data-letter="B">B</div>
+          <div class="keys" data-letter="N">N</div>
+          <div class="keys" data-letter="M">M</div>
+          <div class="keys" data-letter="BACKSPACE">Delete</div>
+      </div>
+  </div>
+  <!--
+  <h1>Text-to-Image Generator</h1>
+  <form id="text-to-image-form">
+      <label for="prompt">Enter your prompt:</label>
+      <input type="text" id="prompt" required>
+      <button type="submit">Generate Image</button>
+  </form>
+  -->
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>
