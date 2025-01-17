@@ -431,7 +431,6 @@ header {
         border-top: solid white 2px;
         border-bottom: solid white 2px;
         gap: 10px;
-        background: red;
     }
     .keys {
         height: 35px;
