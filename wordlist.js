@@ -22,7 +22,7 @@ export const words = [
   "leafy", "lilac", "linen", "lofty", "lotus", "lunar", "mirth", "mossy", "mural",
   "nifty", "ninja", "nudge", "oasis", "otter", "petal", "plume", "plush", "prune",
   "quill", "quirk", "quota", "rainy", "relic", "rural", "saint", "silky", "sleek",
-  "snail", "spear", "spine", "spool", "stalk", "stash", "stork", "swirl", "thief",
+  "snail", "spear", "spine", "spool", "stalk", "stash", "stork", "swirl", "snoop",
   "thorn", "tidal", "torch", "twine", "valet", "verge", "vista", "weird", "wharf",
   "wispy", "woody", "yacht", "yearn", "zesty", "zippy", "azure", "basil", "bring",
   "blame", "clean", "drink", "blink", "think", "drive", "sweep", "swing", "spend",

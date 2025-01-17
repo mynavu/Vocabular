@@ -6,6 +6,8 @@ html * {
 
 html {
     scrollbar-width: none;
+    height: 100%;
+    width: 100%;
 }
 
 * {
@@ -34,8 +36,8 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    height: 580px;
-    width: 450px;
+    height: 40vw;
+    width: 30vw;
     margin: auto;
 }
 
