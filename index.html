@@ -7,18 +7,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="vocabularfavi.png">
 </head>
 <body>
   <header>
       <img class="logo" src="vocabularlogo.png">
-      <h1>Vocabular!</h1>
-      <h2>Vocab List</h2>
+      <h1 class="title">Vocabular</h1>
+      <div class="coin">
+          <div class="coinContainer">
+              <img src="vocabularcoin.png">
+              <h1 class="amount"><span id="currentAmount">0</span>&nbsp</h1>
+          </div>
+      </div>
+      <h2 class="vocabButton">&nbspDictionary</h2>
   </header>
-  <h3>Image (1 Coin):</h3>
+  <h3 class="align margin">Buy Hints:</h3>
+  <div class="hintsContainer">
+      <button id="imageButton">Images (1 Coin)</button>
+      <button id="definitionButton">Definition (3 Coins)</button>
+  </div>
+
+  <h3 class="margin margin-left">Part of speech: <span id="partOfSpeechOutput"></span></h3>
+  <h3 class="margin margin-left">Image: <span class="numberOfImages"> UNLOCKED </span></h3>
 
   <div id="imageOutput"></div>
-  <h3>Definition (3 Coin): <span id="definitionOutput"></span></h3>
-  <h3>Part of speech: </h3>
+  <h3 class="margin margin-left">Definition: <span id="definitionOutput">UNLOCKED</span></h3>
+
+  <dialog id="outcome">
+      <button class="exit-button">&times;</button>
+      <h1 class="winOrLose margin align"></h1>
+      <img class="characterImage">
+      <h2 class="revealAndAdd margin align"></h2>
+      <div class="hintsContainer">
+          <button id="addToDict">Add to Dictionary</button>
+          <button id="nextWord">Next Word</button>
+      </div>
+  </dialog>
+
+  <dialog id="dictionaryList">
+      <button class="exit-button2">&times;</button>
+
+      <div class="vocabContainer">
+          <h2 class="noWords"> There are currently no words in your dictionary list. </h2>
+      </div>
+
+  </dialog>
+
+  <button id="nextWord2">Next Word</button>
+
   <div class="gridContainer">
       <div id="r1c1" class="spots"></div>
       <div id="r1c2" class="spots"></div>
@@ -87,14 +123,6 @@
           <div class="keys" data-letter="BACKSPACE">Delete</div>
       </div>
   </div>
-  <!--
-  <h1>Text-to-Image Generator</h1>
-  <form id="text-to-image-form">
-      <label for="prompt">Enter your prompt:</label>
-      <input type="text" id="prompt" required>
-      <button type="submit">Generate Image</button>
-  </form>
-  -->
 
   <script src="main.js" type="module"></script>
 </body>

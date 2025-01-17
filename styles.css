@@ -1,13 +1,23 @@
 html * {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
   font-family: "Rubik", serif;
+}
+
+html {
+    scrollbar-width: none;
 }
 
 * {
     box-sizing: border-box;
+}
+
+#partOfSpeechOutput, #definitionOutput, .numberOfImages {
+    color: yellow;
+}
+
+.yellow {
+    color: yellow;
 }
 
 h3 {
@@ -16,6 +26,7 @@ h3 {
 
 body {
     background: black;
+    margin-bottom: 30px;
 }
 
 .gridContainer {
@@ -41,17 +52,19 @@ body {
     border: grey solid 5px;
 }
 
-.red {
+.grey {
     background: grey !important;
 }
 
-.green {
-    background: #cb6ce6 !important;
+.purple {
+    background: rgb(203, 108, 230) !important;
+    border: rgb(203, 108, 230) solid 5px;
 
 }
 
-.yellow {
-    background: #94d2ff !important;
+.blue {
+    background: rgb(156, 227, 254) !important;
+    border: rgb(156, 227, 254) solid 5px;
 
 }
 
@@ -111,13 +124,28 @@ body {
 
 .keyboard {
     margin-top: 20px !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
     grid-template-rows: repeat(3, 1fr);
     display: grid;
     height: 200px;
     width: 800px;
     margin: auto;
-    background: blue;
+    border-top: solid white 2px;
+    border-bottom: solid white 2px;
+    gap: 10px;
 
+}
+
+.align {
+    text-align: center;
+}
+
+
+
+.margin {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .keyboardrow1 {
@@ -142,20 +170,24 @@ body {
 }
 
 .keys {
-    height: 30px;
+    height: 50px;
     width: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    background: red;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: white;
     gap: 5px;
     text-align: center;
     font-size: 20px;
     cursor: pointer;
+    border-radius: 5px;
+
 }
 
 header {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(15, 1fr);
     width: 100%;
     background: #cb6ce6;
     padding: 10px;
@@ -166,24 +198,244 @@ header {
     grid-column: 1;
     width: auto;
     height: 60px;
-
 }
 
-header h1 {
+
+.title {
     color: white;
     grid-column: 2;
 }
 
-header h2 {
+.vocabButton {
     color: white;
-    grid-column: 8;
+    grid-column: 15;
     text-align: right;
+    margin-top: 5px;
+    cursor: pointer;
 }
+
+.coin {
+    grid-column: 14;
+    white-space: nowrap; /* Prevent child elements from wrapping to the next line */
+    text-align: left;
+    max-width: 100%;
+}
+
+.hintsContainer {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: rows;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.characterImage {
+    width: 300px;
+    height: auto;
+    margin: auto;
+    display: block;
+
+}
+
+.exit-button {
+    margin-top: 10px;
+    margin-left: 20px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+
+.exit-button2 {
+    margin-top: 10px;
+    margin-left: 20px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+
+.winOrLose {
+    margin-top: 0px; !important;
+}
+
+#outcome {
+    height: 500px;
+    width: 700px;
+    background: rgb(203, 108, 230);
+    margin: auto;
+    position: fixed;
+    z-index: 5;
+    display: none;
+    border: black 5px solid;
+    border-radius: 30px;
+}
+
+#dictionaryList {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70%;
+    width: 70%;
+    background: rgb(156, 227, 254);
+    margin: auto;
+    position: fixed;
+    z-index: 5;
+    display: none;
+    border: black 5px solid;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.vocabContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+
+.vocabCard {
+    height: auto;
+    width: 90%;
+    background: white;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.vocabCard:last-child {
+    margin-bottom: 70px !important;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.coinContainer {
+    border-right: solid white 2px;
+    width: 100%;
+}
+
+.coinContainer * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.coin h1 {
+    color: white;
+}
+
+.margin-left {
+    margin-left: 30px;
+}
+
+.coin img {
+    height: 40px;
+    width: 40px;
+}
+
+#imageOutput {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    gap: 10px;
+    justify-content: space-around;
+}
+
 
 .imageContainer {
     object-fit: cover;
-    width: 500px;
+    width: 400px;
     height: 300px;
     border-radius: 50px;
+
+}
+
+.noWords {
+    margin-top: 100px;
+    display: none;
+
+}
+
+#nextWord2 {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 3;
+    padding: 10px;
+    border-radius: 20px;
+    background: rgb(203, 108, 230);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+
+}
+
+#imageButton, #definitionButton {
+    padding: 10px;
+    border-radius: 20px;
+    background: rgb(156, 227, 254);
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#addToDict, #nextWord {
+    padding: 10px;
+    border-radius: 20px;
+    background: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border: black solid 2px;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .keyboard {
+        margin-top: 20px !important;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        grid-template-rows: repeat(3, 1fr);
+        display: grid;
+        height: 200px;
+        width: 450px;
+        margin: auto;
+        border-top: solid white 2px;
+        border-bottom: solid white 2px;
+        gap: 10px;
+    }
+    .keys {
+        height: 35px;
+        width: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        background: white;
+        gap: 5px;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+
+    }
+    .title {
+        display: none;
+    }
 
 }
